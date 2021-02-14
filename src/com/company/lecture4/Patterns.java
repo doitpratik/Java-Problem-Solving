@@ -73,15 +73,185 @@ public class Patterns {
             rowmirror++;
         }
     }
+    public static void HalfDiamondInversecoloumn(int n){
+        int row = 0, rowmirror=0;
+        while ( row< n){
+            int col = 0 ;
+            int colmirror = 0;
+            while(colmirror < 2*n-1){
+                if(col < row){
+                    System.out.print("  ");
+                }
+                else{
+                    System.out.print("* ");
+                }
+                if(colmirror < n-1){
+                    col++;
+                }else{
+                    col--;
+                }
+                colmirror++;
+            }
+            System.out.println();
+            /*if(rowmirror < n-1){
+                row++;
+            }
+            else {
+                row--;
+            }*/
+            row++;
+        }
+    }
+    public static void HalfDiamondInverserow(int n){
+        int row = 0, rowmirror=0;
+        while ( rowmirror< 2*n-1){
+            int col = 0 ;
+            int colmirror = 0;
+            while(col < n){
+                if(col < row){
+                    System.out.print("  ");
+                }
+                else{
+                    System.out.print("* ");
+                }
+                /*if(colmirror < n-1){
+                    col++;
+                }else{
+                    col--;
+                }
+                colmirror++;*/
+                col++;
+            }
+            System.out.println();
+            if(rowmirror < n-1){
+                row++;
+            }
+            else {
+                row--;
+            }
+            rowmirror++;
+        }
+    }
+    public static void HalfDiamondInverse_columnwisemirroring(int n){
+        int row = 0, rowmirror=0;
+        while ( rowmirror< 2*n-1){
+            int col = 0 ;
+            int colmirror = 0;
+            while(colmirror < 2*n-1){
+                if(col < row){
+                    System.out.print("  ");
+                }
+                else{
+                    System.out.print("* ");
+                }
+                if(colmirror < n-1){
+                    col++;
+                }else{
+                    col--;
+                }
+                colmirror++;
+            }
+            System.out.println();
+            if(rowmirror < n-1){
+                row++;
+            }
+            else {
+                row--;
+            }
+            rowmirror++;
+        }
+    }
+    public static void Diamond(int n){
+        int row = 0, rowmirror=0;
+        while ( rowmirror< 2*n-1){
+            int col = 0 ;
+            int colmirror = 0;
+            while(colmirror < 2*n-1){
+                if((col+row) < n-1){
+                    System.out.print("  ");
+                }
+                else{
+                    System.out.print("* ");
+                }
+                if(colmirror < n-1){
+                    col++;
+                }else{
+                    col--;
+                }
+                colmirror++;
+            }
+            System.out.println();
+            if(rowmirror < n-1){
+                row++;
+            }
+            else {
+                row--;
+            }
+            rowmirror++;
+        }
+    }
+    public static void Diamondcutting(int n){
+        int row = 0, rowmirror=0;
+        while ( rowmirror< 2*n-1){
+            int col = 0 ;
+            int colmirror = 0;
+            while(colmirror < 2*n-1){
+                if((col+row) < n-1){
+                    System.out.print("* ");
+                }
+                else{
+                    System.out.print("  ");
+                }
+                if(colmirror < n-1){
+                    col++;
+                }else{
+                    col--;
+                }
+                colmirror++;
+            }
+            System.out.println();
+            if(rowmirror < n-1){
+                row++;
+            }
+            else {
+                row--;
+            }
+            rowmirror++;
+        }
+    }
+    public static void HalfDiamondInverse_columnInvertedmirroring(int n){
+        int row = 0, rowmirror=0;
+        while ( row< n){
+            int col = 0 ;
+            int colmirror = 0;
+            while(colmirror < 2*n-1){
+                if(col < row){
+                    System.out.print("* ");
+                }
+                else{
+                    System.out.print(" ");
+                }
+                if(colmirror < n-1){
+                    col++;
+                }else{
+                    col--;
+                }
+                colmirror++;
+            }
+            System.out.println();
+            /*if(rowmirror < n-1){
+                row++;
+            }
+            else {
+                row--;
+            }*/
+            row++;
+        }
+    }
+
 
     public static void main(String[] args) {
-        Base_pattern(5);
-        System.out.println();
-        Uptriangle(6);
-        System.out.println();
-        Downtriangle(5);
-        System.out.println();
-        HalfDiamond(4);
+        HalfDiamondInverse_columnInvertedmirroring(5);
     }
 
 
