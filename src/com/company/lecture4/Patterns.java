@@ -221,15 +221,15 @@ public class Patterns {
     }
     public static void HalfDiamondInverse_columnInvertedmirroring(int n){
         int row = 0, rowmirror=0;
-        while ( row< n){
+        while ( rowmirror< n){
             int col = 0 ;
             int colmirror = 0;
             while(colmirror < 2*n-1){
                 if(col < row){
-                    System.out.print("* ");
+                    System.out.print(" ");
                 }
                 else{
-                    System.out.print(" ");
+                    System.out.print("* ");
                 }
                 if(colmirror < n-1){
                     col++;
@@ -239,20 +239,74 @@ public class Patterns {
                 colmirror++;
             }
             System.out.println();
-            /*if(rowmirror < n-1){
+            if(rowmirror < n-1){
                 row++;
             }
             else {
                 row--;
+            }
+            rowmirror++;
+        }
+    }
+    public static  void square_number_pattern(int num){
+        int row=0,rowmirror=0;
+        while(rowmirror<2*num-1){
+            int col = num;
+            while(col>num-row){
+                System.out.print(col+" ");
+                col--;
+            }
+            col=0;
+            while(col<num-row){
+                System.out.print((num-row)+" ");
+                col++;
+            }
+            System.out.println();
+            if(rowmirror < num-1){
+                row++;
+            }
+            else{
+                row--;
+            }
+            rowmirror++;
+
+        }
+    }
+    public static  void square_number_pattern_col(int num){
+        int row=0,rowmirror=0;
+        while(rowmirror<2*num-1){
+            int col = num;
+             while(col>num-row){
+                System.out.print(col+" ");
+                col--;
+            }
+            /*int col=0;
+            while(col<num-row){
+                System.out.print((num-row)+" ");
+                col++;
             }*/
-            row++;
+            System.out.println();
+            if(rowmirror < num-1){
+                row++;
+            }
+            else{
+                row--;
+            }
+            rowmirror++;
+
         }
     }
 
 
     public static void main(String[] args) {
-        HalfDiamondInverse_columnInvertedmirroring(5);
+
+        //HalfDiamondInverse_columnwisemirroring(5);
+        //HalfDiamondInverse_columnInvertedmirroring(5);
+        //square_number_pattern_col(5);
+        //HalfDiamondInverserow(5);
+        Diamondcutting(5);
     }
+
 
 
 }

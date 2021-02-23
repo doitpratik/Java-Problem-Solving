@@ -34,7 +34,7 @@ public class Dumbell {
         int row = 0;
         while(row < n){
             int col=0;
-            int col=0;
+            int colmix=0;
             while(col < n){
                 if((col+row)%2==0){
                     System.out.print("* ");
