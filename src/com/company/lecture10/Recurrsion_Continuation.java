@@ -1,6 +1,6 @@
 package com.company.lecture10;
 
-public class Recurrsion {
+public class Recurrsion_Continuation {
     private static void pattern_recurrsion(int row, int col){
         if(row == 0){
             return ;
