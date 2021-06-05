@@ -1,4 +1,4 @@
-package lecture11;
+package com.company.lecture11;
 
 import java.util.Arrays;
 
@@ -28,10 +28,6 @@ public class Mergesorrting {
         return  merge(first, second);
     }
 
-    private static void mergeSort(int[] nums, int start, int end) {
-        int mid = start + (end-start)/2 ;
-
-    }
 
     private static int[] merge(int[] first, int[] second) {
         int i=0, j=0,k=0;

@@ -37,10 +37,10 @@ public class Dumbell {
             int colmix=0;
             while(col < n){
                 if((col+row)%2==0){
-                    System.out.print("* ");
+                    System.out.print("1 ");
                 }
                 else{
-                    System.out.print("  ");
+                    System.out.print("0 ");
                 }
                 col++;
             }

@@ -300,11 +300,29 @@ public class Patterns {
 
     public static void main(String[] args) {
 
-        //HalfDiamondInverse_columnwisemirroring(5);
-        //HalfDiamondInverse_columnInvertedmirroring(5);
-        //square_number_pattern_col(5);
-        //HalfDiamondInverserow(5);
+        HalfDiamondInverse_columnwisemirroring(5);
+        System.out.println();
+        HalfDiamondInverse_columnInvertedmirroring(5);
+        System.out.println();
+        square_number_pattern_col(5);
+        System.out.println();
+        HalfDiamondInverserow(5);
+        System.out.println();
         Diamondcutting(5);
+        System.out.println();
+        square_number_pattern(5);
+        System.out.println();
+        Diamond(5);
+        System.out.println();
+        Uptriangle(5);
+        System.out.println();
+        Downtriangle(5);
+        System.out.println();
+        HalfDiamond(5);
+        System.out.println();
+        HalfDiamondno(5);
+        System.out.println();
+        HalfDiamondInversecoloumn(5);
     }
 
 
