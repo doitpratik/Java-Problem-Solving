@@ -7,8 +7,8 @@ public class Bitwise_Intro {
         System.out.println(isOdd(num));
         int[] nums = {2,3,5,7,5,6,3,2,6};
         System.out.println(findUnique(nums));
-        int number = 21;
-        System.out.println(countbits(number));
+        //int number = 11111111111111111111111111111101;
+        //System.out.println(countbits(number));
     }
 
     private static int countbits(int number) {

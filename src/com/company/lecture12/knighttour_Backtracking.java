@@ -15,8 +15,8 @@ public class knighttour_Backtracking {
         int[] xdirection_Move = {2, 1, -1, -2, -2, -1, 1, 2};
         int[] ydirection_Move = {1, 2, 2, 1, -1, -2, -2, -1};
         //starting point of knight
-        board[0][0] = 0;
-        if(nQueens(0,0,1,board, xdirection_Move,ydirection_Move)){
+        board[7][7] = 0;
+        if(nQueens(7,7,1,board, xdirection_Move,ydirection_Move)){
             System.out.println(Arrays.deepToString(board));
         }else{
             System.out.println("No solution");
@@ -32,7 +32,7 @@ public class knighttour_Backtracking {
             int j_next = j + ydire[k];
             if(isSafe(board,i_next, j_next)){
                 board[i_next][j_next] = count;
-                if(nQueens(i_next, j_next, count+1, board, xdire, ydire)){
+                if(nQueens(i_next , j_next, count+1, board, xdire, ydire)){
                     return true;
                 }else{
                     board[i_next][j_next] = -1;
