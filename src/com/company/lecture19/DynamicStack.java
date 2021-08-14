@@ -1,6 +1,6 @@
 package com.company.lecture19;
 
-public class DynamicStack extends StackImplemtentation {
+public class DynamicStack extends CustomStack {
     @Override
     public void push(int value) {
         if(isFull()){
@@ -8,6 +8,7 @@ public class DynamicStack extends StackImplemtentation {
             for (int i = 0; i < this.data.length; i++) {
                 temp[i] = this.data[i];
             }
+
             this.data = temp;
         }
         super.push(value);

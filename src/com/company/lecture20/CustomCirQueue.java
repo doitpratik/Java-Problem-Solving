@@ -5,7 +5,7 @@ public class CustomCirQueue {
     protected int front;
     protected int rear;
     protected int size;
-    protected static final int DEFFAULT_SIZE = 10;
+    protected static final int DEFAULT_SIZE = 10;
 
     CustomCirQueue(int size){
         this.data = new Integer[size];
@@ -14,8 +14,8 @@ public class CustomCirQueue {
         this.size = 0;
 
     }
-    public CustomCirQueue(){
-        this(DEFFAULT_SIZE);
+    CustomCirQueue(){
+        this(DEFAULT_SIZE);
     }
     public void enqueue(int value){
         if(isFull()){

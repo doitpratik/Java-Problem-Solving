@@ -1,6 +1,6 @@
 package com.company.lecture10;
 
-public class Recursion_StringRelated_Question {
+public class  Recursion_StringRelated_Question {
     public static void main(String[] args) {
         String str = "abc";
         subsequence_LimitofNo("",str);

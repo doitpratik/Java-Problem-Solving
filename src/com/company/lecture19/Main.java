@@ -4,53 +4,42 @@ import com.company.lecture20.CustomCirQueue;
 import com.company.lecture20.CustomQueues;
 import com.company.lecture20.DyanamicQueue;
 
-import javax.crypto.CipherInputStream;
-import java.util.Stack;
+
 
 public class Main {
     public static void main(String[] args) {
-/*        StackImplemtentation stack = new StackImplemtentation();
+        System.out.println("Stack implementation checking");
+
+        CustomStack stack = new CustomStack(5);
         stack.push(12);
-        stack.push(13);
         stack.push(23);
-        stack.push(17);
+        stack.push(24);
         System.out.println(stack.pop());
-        stack.push(25);
+        stack.push(56);
+        stack.push(71);
         System.out.println(stack.pop());
-        stack.push(1000);
-        System.out.println(stack.peek());*/
-        DynamicStack stack = new DynamicStack();
-        for (int i = 0; i < 101; i++) {
-            stack.push(i);
-        }
+        stack.push(80);
+        stack.push(83);
+
+
         System.out.println(stack.peek());
-        System.out.println();
-
-        CustomQueues queue = new CustomQueues();
-        for (int i = 0; i < 5; i++) {
-            queue.enqueue(i+1);
-        }
-        queue.dequeue();
-        queue.enqueue(12);
-        System.out.println(queue.dequeue());
-        queue.enqueue(15);
-
-        System.out.println(queue);
 
 
-        DyanamicQueue sirque = new DyanamicQueue();
-        for (int i = 0; i < 5; i++) {
-            sirque.enqueue(i);
-          }
-        sirque.dequeue();
-        sirque.enqueue(13);
-        sirque.enqueue(23);
-        sirque.enqueue(23);
-        sirque.enqueue(23);
-        sirque.enqueue(23);
-        sirque.enqueue(24);
-        sirque.enqueue(25);
+        System.out.println(" Dynamic Stack Working");
+        DynamicStack dStack = new DynamicStack();
+        dStack.push(12);
+        dStack.push(13);
+        dStack.push(14);
+        System.out.println("pop " +dStack.pop());
+        dStack.push(15);
+        dStack.push(16);
+        System.out.println("pop " +dStack.pop());
+        dStack.push(17);
+        dStack.push(18);
+        System.out.println("peek " +dStack.peek());
+        dStack.push(19);
+        System.out.println("peek " +dStack.peek());
 
-        System.out.println(sirque);
+
     }
 }
