@@ -3,13 +3,13 @@ package com.company.lecture5;
 * of large inputs this is not optimized code instead of this sieve of eratothenes is most optimized code */
 public class Prime {
     public static void main(String[] args) {
-        int num = 100;
+        int num = 4;
         System.out.println(primefn(num));
     }
 
     private static boolean primefn(int num) {
-        for(int i=2; i*i < num; i++){
-            if(num%i == 0){
+        for(int i=2; i*i <= num; i++){
+            if(num % i == 0){
                 return false;
             }
         }

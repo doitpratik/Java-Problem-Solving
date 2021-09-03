@@ -1,5 +1,7 @@
 package com.company.lecture22;
 
+import java.util.LinkedList;
+
 public class main {
     public static void main(String[] args) {
         CustomLinkedList LL = new CustomLinkedList();
@@ -15,5 +17,7 @@ public class main {
         System.out.println(LL.midEle());
         LL.reverse();
         System.out.println(LL);
+        LinkedList<Integer> aa = new LinkedList<>();
+
     }
 }

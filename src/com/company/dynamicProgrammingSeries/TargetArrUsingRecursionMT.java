@@ -6,28 +6,28 @@ import java.util.Arrays;
 public class TargetArrUsingRecursionMT {
     public static void main(String[] args) {
         int[]arr = {1, 4, 3, 2, 5, 6};
-        int target = 10;
-        /*
-        long start1 = System.currentTimeMillis();
+        int target = 100;
+
+     /*  long start1 = System.currentTimeMillis();
         System.out.println(permutationWithRecursion(arr, target));
         long end1 = System.currentTimeMillis();
         System.out.println(end1 - start1);*/
-        /*
-        System.out.println("______Using Memoization_____");
+
+       System.out.println("______Using Memoization_____");
         int[] dp = new int[target+1];
         long start = System.currentTimeMillis();
         System.out.println(permutationWithMemoization(arr, target, dp));
         long end = System.currentTimeMillis();
         System.out.println(end - start);
-        */
 
-        System.out.println("______Using Tabulation_____");
+
+       /* System.out.println("______Using Tabulation_____");
         int[] dp = new int[target+1];
         long start = System.currentTimeMillis();
         System.out.println(permutationWithTabulation(arr, dp));
         long end = System.currentTimeMillis();
         System.out.println(end - start);
-        System.out.println(Arrays.toString(dp));
+        System.out.println(Arrays.toString(dp));*/
 
     }
 

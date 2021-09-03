@@ -47,7 +47,7 @@ public class CustomLinkedList {
             int count = 1;
 
             Node temp = this.Head;
-            while(count < index && temp.next != null){ // in this case we can write temp.next as temp
+            while(count < index && temp.next != null){
                 temp = temp.next;
                 count++;
             }
@@ -117,6 +117,20 @@ public class CustomLinkedList {
             }
             int num = slowPoint.value;
             return num;
+        }
+
+        public void cycleDetection(){
+            if(this.Head == null || this.Head.next == null ){
+                return ;
+            }
+            Node slowPoint = this.Head, fastPoint = this.Head;
+            while(fastPoint.next != null && fastPoint.next.next != null){
+                slowPoint = slowPoint.next;
+                fastPoint = fastPoint.next.next;
+                if(fastPoint == slowPoint) {
+                    return ;
+                }
+            }
         }
 
     @Override
