@@ -44,6 +44,7 @@ public class CustomSet<K>{
                 add(element);
             }
         }
+        old = null;
     }
 
     public boolean contains(K value){
