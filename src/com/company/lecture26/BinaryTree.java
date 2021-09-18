@@ -1,22 +1,20 @@
 package com.company.lecture26;
 
 public class BinaryTree<T extends Comparable<T> > {
-    Node root;
-    class Node {
-        T value;
-        Node left;
-        Node right;
+   Node root;
+    class Node{
+       T value;
+       Node left;
+       Node right;
 
-        public Node(T value) {
-            this.value = value;
-        }
-
-        public Node(T value, Node left, Node right) {
-            this.value = value;
-            this.left = left;
-            this.right = right;
-
-        }
+       Node(T value){
+           this.value = value;
+       }
+       Node(T value, Node left, Node right){
+           this.value = value;
+           this.left  = left;
+           this.right = right;
+       }
     }
         //'...' after data types is called as variable argument(varargs) it
         // state that the parameter that are passed in terms of size is undefined it has to assume there
@@ -30,11 +28,12 @@ public class BinaryTree<T extends Comparable<T> > {
     }
     private Node insert(Node node, T value, char[] dirs, int index){
         if(node == null){
-            node  = new Node(value);
-            return  node;
+            node = new Node(value);
+            return node;
         }
         if(dirs.length == index){
-            node.value = value;
+            node.value = value; // if directions are over and if there is node present at the current
+            //place then simply replace the value
             return node;
         }
         if(dirs[index] == 'L'){
@@ -42,24 +41,26 @@ public class BinaryTree<T extends Comparable<T> > {
         }else{
             node.right = insert(node.right, value, dirs, index+1);
         }
-
         return node;
     }
-
     public void display(){
-        display(root, "");
+        display(root, ""); // Indentation is important because we have to display it like a tree
     }
     private void display(Node node, String indent){
-        if(node == null){
-            return;
-        }
-        display(node.right, indent+'\t');
-        System.out.println(indent + node.value);
-        display(node.left, indent+'\t');
+            if(node == null){
+                return ;
+            }
+            display(node.right, indent + '\t');
+            System.out.println(indent + node.value);
+            display(node.left, indent + '\t');
     }
+
+
     public boolean find(T value){
         return find(root, value);
     }
+
+
     private boolean find(Node node, T value){
         if(node == null){
             return false;
@@ -69,10 +70,12 @@ public class BinaryTree<T extends Comparable<T> > {
         }
         return (find(node.left, value) || find(node.right, value));
     }
+
     public T max(){
         return max(root);
     }
-    private T max(Node node){
+
+    private T max (Node node){
         if(node == null){
             return null;
         }

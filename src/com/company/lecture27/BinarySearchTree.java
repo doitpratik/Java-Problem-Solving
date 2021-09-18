@@ -1,15 +1,19 @@
-package com.company.lecture26;
+package com.company.lecture27;
 
+import java.util.ArrayList;
+import java.util.List;
+
+@SuppressWarnings("rawtypes")
 public class BinarySearchTree<T extends Comparable<T>> {
     Node root;
     class Node {
-       T value;
-       Node left;
-       Node right;
+        T value;
+        Node left;
+        Node right;
 
-       Node(T value){
-           this.value = value;
-       }
+        Node(T value){
+            this.value = value;
+        }
     }
 
     public void insert(T value){
@@ -25,7 +29,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
         }else if(node.value.compareTo(value) > 0){
             node.left = insert(node.left, value);
         }else if(node.value.compareTo(value) == 0){//if the values are equal this code will putt the values to left side/ Right side
-        // but thats not case in BST it is not good practice to add duplicate values
+            // but thats not case in BST it is not good practice to add duplicate values
             //node.left = insert(node.left, value);
             // node.right = insert(node.right, value);
         }
@@ -114,4 +118,51 @@ public class BinarySearchTree<T extends Comparable<T>> {
         postorder(node.right);
         System.out.print(node.value + " ");
     }
+
+    public List<T> sortedList(){
+        return makeSortedList(root, new ArrayList<>());
+    }
+    private List<T> makeSortedList(Node node, ArrayList<T> list){
+        if(node == null){
+            return list;
+        }
+        makeSortedList(node.left, list);
+        list.add(node.value);
+        makeSortedList(node.right, list);
+        return list;
+    }
+    public void populateFromSortedArray(T[] sorted){
+        this.root = makeTree(sorted, 0, sorted.length-1);
+    }
+    private Node makeTree(T[] arr,int index, int finalidx){
+        if(index > finalidx){
+            return null;
+        }
+        int mid = (index + finalidx)/2;
+        Node node = new Node(arr[mid]);
+        node.left = makeTree(arr, index, mid-1);
+        node.right = makeTree(arr, mid+1, finalidx);
+        return node;
+    }
+
+    public void range(T start, T end){
+        range(start, end, this.root);
+    }
+    private void range(T start, T end, Node node){
+        if(node == null){
+            return ;
+        }
+        if(node.value.compareTo(start) > 0){
+            range(start, end, node.left);
+        }
+        if(node.value.compareTo(start) >= 0 && node.value.compareTo(end) <=0){
+            System.out.print(node.value+" ");
+        }
+        if(node.value.compareTo(end) < 0){
+            range(start, end, node.right);
+        }
+    }
+
+
 }
+

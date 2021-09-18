@@ -4,9 +4,10 @@ import java.util.Arrays;
 
 public class Sortings {
     public static void main(String[] args) {
-        int[] arr = {5,4,3,2,1};
-        bubbling_sort(arr);
-        System.out.println(Arrays.toString(arr));
+        int[] arr = {1,2,1,1,1};
+        /*bubbling_sort(arr);
+        System.out.println(Arrays.toString(arr));*/
+        System.out.println(jump(arr));
     }
     public static void bubbling_sort(int[] arrai){
         for(int i = 0; i< arrai.length-1; i++){
@@ -26,5 +27,23 @@ public class Sortings {
         arrai[j] = arrai[j2];
         arrai[j2] = temp;
 
+    }
+    public static int jump(int[] nums) {
+        if(nums.length == 1){
+            return 0;
+        }
+        int i = 0, maxReach = 0, count=0;
+        while(i < nums.length && i <= maxReach){
+            if(nums[i] > 0){
+                count++;
+                maxReach = Math.max(i+nums[i], maxReach);
+            }
+            if(maxReach >= nums.length-1){
+                return count;
+            }
+
+            i++;
+        }
+        return 0;
     }
 }
