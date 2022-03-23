@@ -1,0 +1,14 @@
+This Lecture is about Dynamic Programming(DP)
+
+Recursion and DP are related topic
+
+Need of Dynamic Programming:-
+    1. For reducing the calculations which are unnecessarily calculated multiple times
+    2.
+
+There are generally 2 conditions when to use dynamic programming
+    1. Overlapping condition (recurring in any function)
+    2. Optimal Substructure (major prob --> Subproblem --> Optimal)
+
+ Note:- there are more than 2 conditions which are mentioned in the cormen book
+

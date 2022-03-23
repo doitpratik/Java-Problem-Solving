@@ -5,8 +5,8 @@ import java.util.Arrays;
 
 public class TargetArrUsingRecursionMT {
     public static void main(String[] args) {
-        int[]arr = {1, 4, 3, 2, 5, 6};
-        int target = 100;
+        int[]arr = {1, 2, 3, 4, 5, 6};
+        int target = 5;
 
      /*  long start1 = System.currentTimeMillis();
         System.out.println(permutationWithRecursion(arr, target));

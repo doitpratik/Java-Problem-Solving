@@ -3,7 +3,7 @@ package com.company.lecture27;
 import java.util.ArrayList;
 import java.util.List;
 
-@SuppressWarnings("rawtypes")
+
 public class BinarySearchTree<T extends Comparable<T>> {
     Node root;
     class Node {

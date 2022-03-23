@@ -3,7 +3,6 @@ package com.company.lecture27;
 import java.util.ArrayList;
 import java.util.List;
 
-@SuppressWarnings("rawtypes")
 public class AVLTree<T extends Comparable<T>> {
     Node root;
 

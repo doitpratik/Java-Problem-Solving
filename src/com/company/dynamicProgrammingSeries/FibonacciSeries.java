@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class FibonacciSeries {
     public static void main(String[] args) {
-        int num = 6;
+        int num = 50;
         /*
         long start = System.currentTimeMillis();
         System.out.println(fibonacci_Recursion(num));

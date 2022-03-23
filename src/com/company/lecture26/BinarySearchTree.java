@@ -54,7 +54,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
         if(node.value.equals(value)){
             return true;
         }
-        return (node.value.compareTo(value) > 0 ? (find(node.left, value)) : (find(node.right, value)));
+        return (node.value.compareTo(value) > 0 ? (find(node .left, value)) : (find(node.right, value)));
     }
     public T max(){
         return max(root);

@@ -52,3 +52,15 @@ class Solution {
 
     }
 }
+
+class Parent{
+    public void tenX(double a){
+        System.out.println(a*10);
+    }
+}
+class Child extends Parent{
+    @Override
+    public void tenX(double a){
+        System.out.println( a);
+    }
+}

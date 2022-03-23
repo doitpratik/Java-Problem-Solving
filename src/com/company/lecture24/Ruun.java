@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class Ruun {
     public static void main(String[] args) {
-        CustomSet<String> set = new CustomSet<>();
+        CustomSet<String> set = new CustomSet<String>();
         set.add("Pratik");
         set.add("Sudhanshu");
         set.add("Soham");

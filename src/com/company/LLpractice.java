@@ -16,7 +16,7 @@ public class LLpractice {
 
     }
     public void insertLast(int value){
-        if(this.head == null){
+        if(this.head == null ){
             insertFirst(value);
             return;
         }
