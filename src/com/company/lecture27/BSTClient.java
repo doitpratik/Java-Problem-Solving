@@ -19,15 +19,19 @@ public class BSTClient {
 
        /* Integer[] sorted = {6, 10, 12, 14, 19, 21, 27, 36, 42, 47};
         bst.populateFromSortedArray(sorted);*/
-        for (int i = 1; i <= 10 ; i++) {
+        /*for (int i = 1; i <= 10 ; i++) {
             bst.insert(i);
-        }
-        //bst.display();
+        }*/
+        bst.display();
 
         AVLTree<Integer> avlTree = new AVLTree<>();
         for(int i= 1; i <= 10; i++){
             avlTree.insert(i);
         }
-        //avlTree.display();
+        avlTree.display();
+        avlTree.inorder();
+
+        avlTree.rightShift();
+        avlTree.display();
     }
 }

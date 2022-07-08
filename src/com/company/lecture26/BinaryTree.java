@@ -1,5 +1,7 @@
 package com.company.lecture26;
 
+import com.company.lecture27.AVLTree;
+
 public class BinaryTree<T extends Comparable<T> > {
    Node root;
     class Node{
@@ -89,6 +91,25 @@ public class BinaryTree<T extends Comparable<T> > {
             maxval = rightmax;
         }
         return maxval;
+    }
+    public void rightShift(){
+        rightShift(root);
+    }
+    private void rightShift(Node node){
+        if(node == null){
+            return;
+        }
+        if(node.left != null){
+            Node temp = node.right;
+            node.right = node.left;
+            node.left = null;
+            Node tr = node.right;
+            while(tr.right != null){
+                tr = tr.right;
+            }
+            tr.right = temp;
+        }
+        rightShift(node.right);
     }
 
 

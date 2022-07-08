@@ -2,6 +2,7 @@ package com.company.lecture27;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 public class AVLTree<T extends Comparable<T>> {
     Node root;
@@ -140,7 +141,44 @@ public class AVLTree<T extends Comparable<T>> {
             range(start, end, node.right);
         }
     }
-
+    public void inorder(){
+        inorder(root);
+    }
+    private void inorder(Node root) {
+        if (root == null) {
+            return;
+        }
+        Stack<Node> stk = new Stack<>();
+        Node curr = root;
+        while (curr != null || !stk.isEmpty()) {
+            while (curr != null) {
+                stk.push(curr);
+                curr = curr.left;
+            }
+            curr = stk.pop();
+            System.out.print(curr.value + " ");
+            curr = curr.right;
+        }
+    }
+    public void rightShift(){
+        rightShift(root);
+    }
+    private void rightShift(Node node){
+        if(node == null){
+            return;
+        }
+        if(node.left != null){
+            Node temp = node.right;
+            node.right = node.left;
+            node.left = null;
+            Node tr = node.right;
+            while(tr.right != null){
+                tr = tr.right;
+            }
+            tr.right = temp;
+        }
+        rightShift(node.right);
+    }
 
 }
 
